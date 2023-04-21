@@ -39,7 +39,7 @@ aside {
 
 footer {
     grid-area: footer;
-    background-color: lightsalmon;
+    background-color: rgb(173, 79, 42);
 }
 
 .logo>img {
