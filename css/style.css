@@ -1,0 +1,138 @@
+body {
+    margin: 0%;
+    /* height: 100%; */
+    /* Quita el scroll */
+    /* overflow: hidden; */
+    /* Cuadricula */
+    display: grid;
+    grid-template:
+        "header header header" auto
+        "article section aside" auto
+        "footer footer footer" auto/
+        auto 70vw auto;
+}
+
+header {
+    grid-area: header;
+    background-color: #CC5024;
+    display: grid;
+    grid-template-columns: auto 70vw;
+    color: aliceblue;
+    justify-content: center;
+    text-align: center;
+}
+
+article {
+    grid-area: article;
+    background-color: lightskyblue;
+}
+
+section {
+    grid-area: section;
+    background-color: azure;
+}
+
+aside {
+    grid-area: aside;
+    background-color: lemonchiffon;
+}
+
+footer {
+    grid-area: footer;
+    background-color: lightsalmon;
+}
+
+.logo>img {
+    margin: 0%;
+    padding-left: 50px;
+    width: 200px;
+}
+
+.navegacion>nav>ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.navegacion li::marker {
+    content: '🔶';
+}
+
+.navegacion a {
+    color: aliceblue;
+    text-decoration: none;
+}
+
+nav {
+    display: inline;
+}
+
+p {
+    text-align: center;
+}
+
+
+h2 {
+    text-align: center;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.card div {
+    background-color: blanchedalmond;
+    margin: 10px;
+    padding: 5px;
+}
+
+.card-flex {
+    display: flex;
+    /* obligados a permanecer en una misma línea o pueden fluir en varias líneas. */
+    flex-wrap: wrap;
+}
+
+.card-flex div[class|="flex"]:not(div[class~="position"]) {
+    width: 300px;
+    margin: 10px;
+    padding: 5px;
+    background-color: blanchedalmond;
+    text-align: center;
+}
+
+.card-inline {
+    display: inline-flex;
+}
+
+.card-inline div {
+    background-color: blanchedalmond;
+    display: block;
+    width: 300px;
+}
+
+.card-flex div[class~="position"] {
+    width: 300px;
+    background-color: blanchedalmond;
+    text-align: center;
+}
+
+div[class~="card-position"] {
+    /* flex-wrap: nowrap; */
+    justify-content: stretch;
+    justify-content: center;
+    justify-content: flex-start;
+    justify-content: flex-end;
+    justify-content: space-around;
+    justify-content: space-between;
+    justify-content: space-evenly;
+    height: 500px;
+    align-content: center;
+    align-content: start;
+    align-content: end;
+    align-content: space-around;
+    align-content: space-between;
+    align-content: space-evenly;
+
+}

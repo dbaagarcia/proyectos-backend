@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilos para paginas web</title>
+    <!-- Fuentes de google -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire-animation|neon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Rubik Pixels|Tangerine">
+    <!-- Podemos darle estilo a nuestro sitio web en un documento css generalmente llamado style.css, esto permite reciclar los estilos y aplicarlo a todas nuestras paginas dentro del sitio web.
+    NOTA: Utilizado para cambios generales y unificar el sitio web -->
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <!-- Tambien podemos darle estilo a nuestra pagina, mediante una etiqueta de estilos "style" dentro de la cabecera del sitio
+    NOTA: cambios especificos a una pagina -->
+    <style>
+        body {
+            background-color: aqua;
+        }
+
+        .subrayado {
+            text-decoration: underline;
+        }
+
+        .encimatexto {
+            /* Linea estilo color */
+            text-decoration: overline wavy pink;
+        }
+
+        .tachado {
+            text-decoration: line-through;
+        }
+
+        .minusculas {
+            text-transform: lowercase;
+        }
+
+        .mayusculas {
+            text-transform: uppercase;
+        }
+
+        .capitalizacion {
+            text-transform: capitalize;
+        }
+
+        #padre {
+            background-color: lightblue;
+            width: 700px;
+
+        }
+
+        #hijo {
+            background-color: blueviolet;
+            width: 100%;
+            /* PADDING */
+            /* Especifico */
+            max-width: 300px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 5px;
+            padding-right: 5px;
+            /* Aplica a todos */
+            padding: 20px;
+            /* (arriba-abajo) (derecha-izquierda) */
+            padding: 10px 40px;
+            /*  Cada uno (arriba izquierda abajo derecha ) */
+            padding: 5px 6px 7px 8px;
+            /* IZQUIERDA DERECHA */
+            padding-inline: 10px;
+            padding-inline-start: 30px;
+            padding-inline-end: 35px;
+            /* ARRIBA ABAJO */
+            padding-block: 20px;
+            /* BORDE */
+            /* color */
+            border-color: goldenrod;
+            /* estilo */
+            border-style: dashed;
+            /* ancho */
+            border-width: 0.5em;
+            /* radio */
+            border-radius: 15px 50px 30px 5px;
+            /* todos */
+            border: 10px double greenyellow;
+            /* especificos */
+            border-block-start-color: blue;
+            /* MARGEN */
+            margin: 20px;
+            margin: auto;
+
+        }
+
+        #contenido {
+            margin: 0%;
+            /* Alineacion */
+            text-align: center;
+            text-align: left;
+            text-align: right;
+            text-align: start;
+            text-align: end;
+            text-align: justify;
+            /* Identado */
+            text-indent: 50px;
+            /* Direccion */
+            direction: rtl;
+            /* Espaciado de palabras */
+            word-spacing: 10px;
+            /* Espaciado de letras */
+            letter-spacing: 0.5px;
+            /* Linea de espaciado */
+            line-height: 2.0;
+        }
+
+        img {
+            width: 700px;
+            height: 200px;
+            /* Por defecto, ajusta la imagen al tamaño elegido */
+            object-fit: fill;
+            /* Mantiene la relacion de aspecto, pero redimenciona la imagen al tamaño elegido */
+            object-fit: contain;
+            /* Escala la imagen a menos tamaño que el contenedor */
+            object-fit: scale-down;
+            /* La imagen mantiene su relación de aspecto y llena la dimensión dada. La imagen se recortará para que quepa */
+            object-fit: cover;
+            /* No redimenciona la imagen */
+            object-fit: none;
+        }
+
+        .efectos {
+            /* Desenfoque */
+            filter: blur(5px);
+            /* Iluminado */
+            filter: brightness(50%);
+            /* contraste */
+            filter: contrast(25%);
+            /* Escala de grises */
+            filter: grayscale(100%);
+            /* Rotacion de colores */
+            filter: hue-rotate(240deg);
+            /* Saturacion */
+            filter: saturate(150%);
+            /* Invertir colores */
+            filter: invert(100%);
+            /* Opacidad */
+            filter: opacity(10%);
+            /* Sepia */
+            filter: sepia(100%);
+            /* radio */
+            /* border-radius: 100%; */
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Tambien podemos agregar estilos a nuestras estiquetas
+    NOTA: cambios muy especificos -->
+    <p style="font-size: small;"></p>
+    <!-- Selectores -->
+    <p>A todos los parrafos</p>
+    <p class="varios">parrafo 1</p>
+    <p class="varios">parrafo 2</p>
+    <p class="varios">parrafo 3</p>
+    <p id="unico" class="font-effect-neon">parrafo 4</p>
+    <!-- ESTILOS Y DECORACION DE TEXTO   -->
+    <p class="varios subrayado">parrafo 5</p>
+    <p class="varios encimatexto">parrafo 6</p>
+    <p class="varios tachado">parrafo 7</p>
+    <p class="varios minusculas">PARRAFO 8</p>
+    <p class="varios mayusculas">parrafo 9</p>
+    <p class="varios capitalizacion">parrafo numero 10</p>
+    <img class="efectos" src="backend/img/gatitos.jpg" alt="gatitos">
+    <!-- MODELO CAJA -->
+    <div id="padre">
+        <div id="hijo">
+            <p id="contenido">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias libero voluptate
+                deleniti mollitia
+                cupiditate quos sunt, eaque ipsum illum nobis debitis incidunt quo necessitatibus nisi nulla
+                repudiandae. Ducimus, dicta quod!</p>
+        </div>
+    </div>
+</body>
+
+</html>
